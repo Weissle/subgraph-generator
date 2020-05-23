@@ -59,7 +59,6 @@ int main(int argc, char* argv[]) {
 	else {
 		graph = GRFGraphLabel<GraphType, size_t>::readGraph(graph_path.c_str());
 	}
-	cout << "big graph ok" << endl;
 	if (subgraph_node) {
 		sg::SubgraphGenerator<GraphType> subgraphG(*graph, subgraph_node);
 		subgraphG.run();
@@ -99,6 +98,7 @@ void writeToFile(const string& fileName, const GraphType& graph) {
 	f.close();
 }
 void writeMapping(const string& fileName, const vector<NodeIDType>& nodes) {
+	if (fileName.empty())return;
 	ofstream f;
 	f.flush();
 	f.open(fileName.c_str(), ios::out);

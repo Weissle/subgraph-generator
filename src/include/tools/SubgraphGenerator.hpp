@@ -61,7 +61,7 @@ namespace sg {
 						inquery.insert(ver);
 					}
 				}
-	
+				midG.push_back(temp);
 				inSmall.insert(temp);
 				++inSmallSize;
 				inquery.erase(temp);

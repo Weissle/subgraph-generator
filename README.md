@@ -23,5 +23,8 @@ When generate graph,you can choose node label types number,out edges for each no
 ./sg -big-node 100 -labelTypes 2 -edge-avg 2 -variance 0.5 -small-node 10 -bg big.graph -sg small.graph
 ```
 	
+## Graph Format
+Default Graph Format is GRF format(both read and write,more details about GRF in GraphReader.hpp),so if you need other graph format you should write it yourself. If the graph format is a kind of wide-used format you can ask it in issues and I will do it as soon as possible.
+
 ## Other
 Randomly graph and subgraph is a weakly connected at least. So if you use your graph and it is not a weakly connected graph,nodes number of subgraph may less than you need.

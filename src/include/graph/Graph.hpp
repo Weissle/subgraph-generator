@@ -24,9 +24,6 @@ private:
 
 public:
 	Graph() = default;
-	Graph(const vector<NodeType>& __nodes) :_nodes(__nodes) {
-		_size = _nodes.size();
-	}
 	~Graph() = default;
 
 	Graph(const size_t s, GRAPH_TYPE _graphType = GRAPH_TYPE::DIRECTION) :_size(s), graphType(_graphType) {

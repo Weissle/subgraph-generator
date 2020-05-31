@@ -118,11 +118,11 @@ Graph* generatorGraph(size_t graph_node, size_t labelTypes, size_t edgeavg, doub
 	using NodeType = typename Graph::NodeType;
 	vector<NodeType> nodes(graph_node);
 	rg::RandomGenerator* randomer = new rg::NormalRandomGenerator(edgeavg, variance);
+	Graph *graph = new Graph(graph_node);
 	//Set label
 	LOOP(i, 0, graph_node) {
-		nodes[i] = NodeType(i, rand() % labelTypes);
+		graph->setNodeLabel(i, rand() % labelTypes);
 	}
-	Graph *graph = new Graph(nodes);
 	//connect all nodes
 	vector<NodeIDType> in(graph_node);
 	rg::NoRepeatIntRandomGenerator fnp(graph_node - 1);
